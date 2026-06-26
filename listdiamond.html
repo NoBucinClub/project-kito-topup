@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kito TopUp | List Diamond Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Kito<span>TopUp</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html#hero">Beranda</a></li>
+            <li><a href="index.html#cara">Cara Top Up</a></li>
+            <li><a href="index.html#keunggulan">Keunggulan</a></li>
+            <li><a href="index.html#testimoni">Testimoni</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+        <a href="topup.html" class="btn-nav">Top Up Sekarang</a>
+    </nav>
+
+    <section class="section">
+        <h2 id="main-title">Proses Pemesanan</h2>
+
+        <div class="topup-container">
+            <div class="step-box">
+                <div class="step-title">
+                    <div class="step-number">1</div>
+                    <h3>Lengkapi Data Akun</h3>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="player-id" class="input-field" placeholder="Masukkan User ID" required>
+                    <input type="text" id="zone-id" class="input-field hidden-element" placeholder="Masukkan Zone ID">
+                </div>
+                <small class="step-note">*Pastikan ID yang kamu masukkan sudah benar ya kawan!</small>
+            </div>
+
+            <div class="step-box">
+                <div class="step-title">
+                    <div class="step-number">2</div>
+                    <h3>Pilih Nominal Layanan</h3>
+                </div>
+
+                <div id="ml" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '5 Diamonds - Rp 1.581')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>5 Diamonds</h3><p>5 + 0 Bonus</p><div class="price">Rp 1.581</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '12 Diamonds - Rp 3.686')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>12 Diamonds</h3><p>11 + 1 Bonus</p><div class="price">Rp 3.686</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '50 Diamonds - Rp 14.100')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>50 Diamonds</h3><p>45 + 5 Bonus</p><div class="price">Rp 14.100</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '85 Diamonds - Rp 24.237')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>85 Diamonds</h3><p>77 + 8 Bonus</p><div class="price">Rp 24.237</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '170 Diamonds - Rp 48.300')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>170 Diamonds</h3><p>154 + 16 Bonus</p><div class="price">Rp 48.300</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '296 Diamonds - Rp 82.500')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>296 Diamonds</h3><p>264 + 32 Bonus</p><div class="price">Rp 82.500</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '875 Diamonds - Rp 241.000')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>875 Diamonds</h3><p>790 + 85 Bonus</p><div class="price">Rp 241.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '2010 Diamonds - Rp 545.000')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>2010 Diamonds</h3><p>1800 + 210 Bonus</p><div class="price">Rp 545.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '4830 Diamonds - Rp 1.310.000')">
+                            <img src="aset/diamond.png" alt="Diamond" class="game-icon">
+                            <h3>4830 Diamonds</h3><p>4330 + 500 Bonus</p><div class="price">Rp 1.310.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="hok" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '8 Tokens - Rp 2.000')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>8 Tokens</h3><p>Instant</p><div class="price">Rp 2.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '40 Tokens - Rp 8.000')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>40 Tokens</h3><p>Instant</p><div class="price">Rp 8.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '80 Tokens - Rp 15.500')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>80 Tokens</h3><p>Instant Proses</p><div class="price">Rp 15.500</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '240 Tokens - Rp 46.200')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>240 Tokens</h3><p>Instant</p><div class="price">Rp 46.200</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '400 Tokens - Rp 77.500')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>400 Tokens</h3><p>Instant</p><div class="price">Rp 77.500</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '800 Tokens - Rp 154.000')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>800 Tokens</h3><p>Best Value</p><div class="price">Rp 154.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '2400 Tokens - Rp 459.000')">
+                            <img src="aset/Tokens.png" alt="Token" class="game-icon">
+                            <h3>2400 Tokens</h3><p>VVIP Paket</p><div class="price">Rp 459.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ff" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '5 Diamonds - Rp 1.000')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>5 Diamonds</h3><p>Promo</p><div class="price">Rp 1.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '12 Diamonds - Rp 2.000')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>12 Diamonds</h3><p>Promo</p><div class="price">Rp 2.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '70 Diamonds - Rp 10.000')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>70 Diamonds</h3><p>Promo</p><div class="price">Rp 10.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '100 Diamonds - Rp 14.500')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>100 Diamonds</h3><p>FF Promo</p><div class="price">Rp 14.500</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '355 Diamonds - Rp 49.500')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>355 Diamonds</h3><p>FF Promo</p><div class="price">Rp 49.500</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '720 Diamonds - Rp 98.000')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>720 Diamonds</h3><p>Booyah Paket</p><div class="price">Rp 98.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '1440 Diamonds - Rp 195.000')">
+                            <img src="aset/Diamond.png" alt="Diamond" class="game-icon">
+                            <h3>1440 Diamonds</h3><p>Whale Paket</p><div class="price">Rp 195.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="roblox" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '40 Robux - Rp 8.000')">
+                            <img src="aset/Robux.png" alt="Robux" class="game-icon">
+                            <h3>40 Robux</h3><p>Gamepass(5 hari after tax)</p><div class="price">Rp 8.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '80 Robux - Rp 16.000')">
+                            <img src="aset/Robux.png" alt="Robux" class="game-icon">
+                            <h3>80 Robux</h3><p>Gamepass(5 hari after tax)</p><div class="price">Rp 16.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '400 Robux - Rp 76.000')">
+                            <img src="aset/Robux.png" alt="Robux" class="game-icon">
+                            <h3>400 Robux</h3><p>Gamepass(5-7hari)</p><div class="price">Rp 76.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '800 Robux - Rp 149.000')">
+                            <img src="aset/Robux.png" alt="Robux" class="game-icon">
+                            <h3>800 Robux</h3><p>Gamepass(5-7hari)</p><div class="price">Rp 149.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '1700 Robux - Rp 315.000')">
+                            <img src="aset/Robux.png" alt="Robux" class="game-icon">
+                            <h3>1700 Robux</h3><p>Gamepass(5-7hari)</p><div class="price">Rp 315.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="coc" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '80 Gems - Rp 15.000')">
+                            <img src="aset/gems.png" alt="Gems" class="game-icon">
+                            <h3>80 Gems</h3><p>Proses Kilat</p><div class="price">Rp 15.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '500 Gems - Rp 74.500')">
+                            <img src="aset/gems.png" alt="Gems" class="game-icon">
+                            <h3>500 Gems</h3><p>Proses Kilat</p><div class="price">Rp 74.500</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '1200 Gems - Rp 148.000')">
+                            <img src="aset/gems.png" alt="Gems" class="game-icon">
+                            <h3>1200 Gems</h3><p>Proses Kilat</p><div class="price">Rp 148.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '2500 Gems - Rp 295.000')">
+                            <img src="aset/gems.png" alt="Gems" class="game-icon">
+                            <h3>2500 Gems</h3><p>Best Seller</p><div class="price">Rp 295.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '14000 Gems - Rp 1.450.000')">
+                            <img src="aset/gems.png" alt="Gems" class="game-icon">
+                            <h3>14000 Gems</h3><p>Max Pack</p><div class="price">Rp 1.450.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pubg" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '30 UC - Rp 7.000')">
+                            <img src="aset/UC.png" alt="UC" class="game-icon">
+                            <h3>30 UC</h3><p>Global</p><div class="price">Rp 7.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '60 UC - Rp 14.000')">
+                            <img src="aset/UC.png" alt="UC" class="game-icon">
+                            <h3>60 UC</h3><p>PUBG Mobile Global</p><div class="price">Rp 14.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '325 UC - Rp 69.000')">
+                            <img src="aset/UC.png" alt="UC" class="game-icon">
+                            <h3>325 UC</h3><p>Global</p><div class="price">Rp 69.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '660 UC - Rp 138.000')">
+                            <img src="aset/UC.png" alt="UC" class="game-icon">
+                            <h3>660 UC</h3><p>Royale Pass Pack</p><div class="price">Rp 138.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '1800 UC - Rp 345.000')">
+                            <img src="aset/UC.png" alt="UC" class="game-icon">
+                            <h3>1800 UC</h3><p>Global</p><div class="price">Rp 345.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '8100 UC - Rp 1.390.000')">
+                            <img src="aset/UC.png" alt="UC" class="game-icon">
+                            <h3>8100 UC</h3><p>Super Pack</p><div class="price">Rp 1.390.000</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ab" class="game-section">
+                    <div class="grid-3">
+                        <div class="card" onclick="selectDiamond(this, '60 Bonds - Rp 14.800')">
+                            <img src="aset/Bonds.png" alt="Bonds" class="game-icon">
+                            <h3>60 Bonds</h3><p>Instant Server</p><div class="price">Rp 14.800</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '310 Bonds - Rp 74.000')">
+                            <img src="aset/Bonds.png" alt="Bonds" class="game-icon">
+                            <h3>310 Bonds</h3><p>Instant</p><div class="price">Rp 74.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '630 Bonds - Rp 147.000')">
+                            <img src="aset/Bonds.png" alt="Bonds" class="game-icon">
+                            <h3>630 Bonds</h3><p>Instant</p><div class="price">Rp 147.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '1300 Bonds - Rp 295.000')">
+                            <img src="aset/Bonds.png" alt="Bonds" class="game-icon">
+                            <h3>1300 Bonds</h3><p>Instant</p><div class="price">Rp 295.000</div>
+                        </div>
+                        <div class="card" onclick="selectDiamond(this, '6500 Bonds - Rp 1.420.000')">
+                            <img src="aset/Bonds.png" alt="Bonds" class="game-icon">
+                            <h3>6500 Bonds</h3><p>Max Bonds</p><div class="price">Rp 1.420.000</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="step-box">
+                <div class="step-title">
+                    <div class="step-number">3</div>
+                    <h3>Pilih Metode Pembayaran</h3>
+                </div>
+                
+                <div class="payment-grid">
+                    <div class="payment-card" onclick="selectPayment(this, 'QRIS All Payment')">
+                        <img src="img-payment/qris.jpg" alt="QRIS" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">QRIS All Payment</div><div class="payment-status">Proses Otomatis</div></div>
+                    </div>
+                    <div class="payment-card" onclick="selectPayment(this, 'DANA')">
+                        <img src="img-payment/dana.jpg" alt="DANA" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">E-Wallet DANA</div><div class="payment-status">Proses Otomatis</div></div>
+                    </div>
+                    <div class="payment-card" onclick="selectPayment(this, 'OVO')">
+                        <img src="img-payment/ovo.jpg" alt="OVO" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">E-Wallet OVO</div><div class="payment-status">Proses Otomatis</div></div>
+                    </div>
+                    <div class="payment-card" onclick="selectPayment(this, 'GOPAY')">
+                        <img src="img-payment/gopay.jpg" alt="GoPay" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">E-Wallet GoPay</div><div class="payment-status">Proses Otomatis</div></div>
+                    </div>
+                    <div class="payment-card" onclick="selectPayment(this, 'SHOPEEPAY')">
+                        <img src="img-payment/shopeepay.jpg" alt="ShopeePay" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">ShopeePay</div><div class="payment-status">Proses Otomatis</div></div>
+                    </div>
+                    <div class="payment-card" onclick="selectPayment(this, 'Retail Mart')">
+                        <img src="img-payment/alfamart_indomaret.png" alt="Alfamart/Indomaret" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">Alfamart / Indomaret</div><div class="payment-status">Proses Manual</div></div>
+                    </div>
+                    <div class="payment-card" onclick="selectPayment(this, 'Transfer Bank')">
+                        <img src="img-payment/bank.jpg" alt="Transfer Bank" class="payment-logo" onerror="this.style.display='none';">
+                        <div class="payment-info"><div class="payment-name">Transfer Bank</div><div class="payment-status">Proses Otomatis</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-box">
+                <div class="checkout-box">
+                    <div>
+                        <p class="checkout-desc">Detail Orderan Kamu:</p>
+                        <h4 id="summary-text" class="checkout-summary">Silahkan pilih item & pembayaran terlebih dahulu.</h4>
+                    </div>
+                    <button class="btn-checkout" onclick="prosesBeli()">Beli Sekarang</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-box">
+            <span id="modal-icon" class="modal-icon">⚠️</span>
+            <h3 id="modal-title">Pemberitahuan</h3>
+            <p id="modal-message">Isi pesan ada di sini kawan.</p>
+            <button class="btn-modal-close" onclick="closeModal()">Oke, Paham</button>
+        </div>
+    </div>
+
+    <footer>
+        <h3>KitoTopUp</h3>
+        <p>Top Up Nian, Hargo Kawan</p>
+        <small>© 2025 KitoTopUp</small>
+    </footer>
+
+   <script>
+        let selectedItemName = "";
+        let selectedPaymentName = "";
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const gameSelected = urlParams.get('game');
+        const mainTitle = document.getElementById('main-title');
+
+        const gameNames = {
+            'ml': 'Mobile Legends: Bang Bang',
+            'hok': 'Honor of Kings',
+            'ff': 'Free Fire',
+            'roblox': 'Roblox',
+            'coc': 'Clash of Clans',
+            'pubg': 'PUBG Mobile',
+            'ab': 'Arena Breakout'
+        };
+
+        // Ganti teks input secara otomatis di sini kawan
+        const playerIdInput = document.getElementById('player-id');
+        const stepNote = document.querySelector('.step-note');
+
+        if (gameSelected && gameNames[gameSelected]) {
+            const targetSection = document.getElementById(gameSelected);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                mainTitle.innerText = "Top Up " + gameNames[gameSelected];
+                
+                // Kalau yang dibuka Roblox, otomatis berubah jadi Gamepass
+                if (gameSelected === 'roblox') {
+                    playerIdInput.placeholder = "Masukkan ID Gamepass";
+                    stepNote.innerText = "*Pastikan ID Gamepass nya benar ya kawan!";
+                }
+
+                if(gameSelected === 'ml') {
+                    document.getElementById('zone-id').style.display = 'block';
+                }
+            }
+        } else {
+            document.querySelectorAll('.game-section').forEach(section => {
+                section.classList.add('active');
+            });
+            mainTitle.innerText = "Semua Produk Game Store";
+        }
+
+        function selectDiamond(element, itemName) {
+            document.querySelectorAll('.card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedItemName = itemName;
+            updateSummary();
+        }
+
+        function selectPayment(element, paymentName) {
+            document.querySelectorAll('.payment-card').forEach(card => card.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedPaymentName = paymentName;
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const summaryText = document.getElementById('summary-text');
+            if(selectedItemName && selectedPaymentName) {
+                summaryText.innerText = `${selectedItemName} via ${selectedPaymentName}`;
+            } else if(selectedItemName) {
+                summaryText.innerText = `${selectedItemName} (Belum pilih pembayaran)`;
+            } else if(selectedPaymentName) {
+                summaryText.innerText = `Layanan belum dipilih, Pembayaran: ${selectedPaymentName}`;
+            }
+        }
+
+        function tunjukkanNotif(icon, judul, pesan) {
+            document.getElementById('modal-icon').innerText = icon;
+            document.getElementById('modal-title').innerText = judul;
+            document.getElementById('modal-message').innerText = pesan;
+            document.getElementById('custom-modal').classList.add('show');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.remove('show');
+        }
+
+        function prosesBeli() {
+            const playerId = document.getElementById('player-id').value;
+            const zoneId = document.getElementById('zone-id').value;
+
+            if(!playerId) {
+                // Notifikasi peringatan juga otomatis berubah di sini
+                const namaId = (gameSelected === 'roblox') ? 'ID Gamepass' : 'User ID';
+                tunjukkanNotif('❌', `${namaId} Kosong!`, `Tolong isi ${namaId} Game kamu dulu ya kawan, biar kito tau dikirim ke mana!`);
+                return;
+            }
+            if(gameSelected === 'ml' && !zoneId) {
+                tunjukkanNotif('❌', 'Zone ID Kurang!', 'Khusus Mobile Legends, Zone ID wajib diisi ya!');
+                return;
+            }
+            if(!selectedItemName) {
+                tunjukkanNotif('💎', 'Belum Pilih Paket', 'Silahkan pilih nominal layanan dulu sebelum checkout.');
+                return;
+            }
+            if(!selectedPaymentName) {
+                tunjukkanNotif('💳', 'Metode Pembayaran?', 'Pilih dulu metenedya kawan, mau bayar pake QRIS, DANA, atau yang lain.');
+                return;
+            }
+
+            let infoAkun = playerId;
+            if(zoneId) { infoAkun += ` (${zoneId})`; }
+
+            tunjukkanNotif('🎉', 'Pesanan Berhasil!', `Mantap kawan! Orderan ${selectedItemName} via ${selectedPaymentName} untuk ID ${infoAkun} sedang diproses.`);
+        }
+    </script>
+</body>
+</html>
